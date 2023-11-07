@@ -1,0 +1,10 @@
+project(imgui_examples)
+
+if(OpenGL_FOUND)
+if(glfw3_FOUND)
+    add_executable(example_glfw_opengl2 example_glfw_opengl2/main.cpp)
+    target_link_libraries(example_glfw_opengl2 imgui_glfw)
+    add_executable(example_glfw_opengl3 example_glfw_opengl3/main.cpp)
+    target_link_libraries(example_glfw_opengl3 imgui_glfw)
+endif()
+endif()
