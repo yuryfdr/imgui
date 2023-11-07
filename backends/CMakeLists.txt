@@ -15,5 +15,11 @@ if(glfw3_FOUND)
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
     )
 endif()
-
+if(FreeGLUT_FOUND)
+    add_library(imgui_glut SHARED imgui_impl_glut.cpp imgui_impl_glut.h)
+    target_link_libraries(imgui_glut imgui_opengl FreeGLUT::freeglut)
+    target_include_directories(imgui_glut PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    )
+endif()
 endif()

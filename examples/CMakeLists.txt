@@ -7,4 +7,8 @@ if(glfw3_FOUND)
     add_executable(example_glfw_opengl3 example_glfw_opengl3/main.cpp)
     target_link_libraries(example_glfw_opengl3 imgui_glfw)
 endif()
+
+add_executable(example_glut_opengl2 example_glut_opengl2/main.cpp)
+target_link_libraries(example_glut_opengl2 imgui_glut)
+
 endif()

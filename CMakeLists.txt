@@ -4,7 +4,7 @@ project(imgui)
 set(OpenGL_GL_PREFERENCE GLVND)
 find_package(OpenGL)
 find_package(glfw3)
-
+find_package(FreeGLUT)
 set(SOURCES
 imgui.cpp
 imgui_demo.cpp
